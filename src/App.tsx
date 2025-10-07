@@ -1,9 +1,13 @@
+import React from "react"
+import LandingPage from "./pages/LandingPage"
 
-function App() {
-  
+const App: React.FC = () =>  {
+
   return (
     <>
-      <h1 className="text-4xl font-bold text-blue-900 text-center p-12">IremeOn Landing Page</h1>
+<div className="min-h-screen">
+      <LandingPage />
+    </div>
     </>
   )
 }
