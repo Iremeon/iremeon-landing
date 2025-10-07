@@ -41,7 +41,7 @@ const OurWork: React.FC = () => {
         </div>
       </div>
       <div className="mt-16">
-        <Button variant="primary" className='flex items-center gap-2 mx-auto'>View Full Portfolio</Button>
+        <Button variant="primary" className='flex items-center gap-2 mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300'>View Full Portfolio</Button>
       </div>
     </section>
   );
