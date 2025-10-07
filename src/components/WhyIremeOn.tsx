@@ -36,7 +36,7 @@ const WhyIremeOn: React.FC = () => {
           <p className="text-textcolor-200">Solutions that grow with your business, safely and reliably.</p>
         </div>
       </div>
-      <Button variant="primary" className='flex items-center gap-2 mx-auto'>
+      <Button variant="primary" className='flex items-center gap-2 mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300'>
         Ready to experience the IremeOn difference?
       </Button>
     </section>
