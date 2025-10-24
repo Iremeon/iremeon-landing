@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
           <div className="space-y-3 text-sm">
             <div>
               <p className="text-textcolor-100 font-medium">Email</p>
-              <p className="text-textcolor-200">hello@iremeon.com</p>
+              <p className="text-textcolor-200">info@iremeon.com</p>
             </div>
             <div>
               <p className="text-textcolor-100 font-medium">Phone</p>
