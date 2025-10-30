@@ -105,7 +105,7 @@ const ContactUs: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4 py-7">
         <div className="text-center">
           <h3 className="text-lg font-bold text-textcolor-300 mb-2">Email</h3>
-          <p className="text-textcolor-300/80">hello@iremeon.com</p>
+          <p className="text-textcolor-300/80">info@iremeon.com</p>
         </div>
         <div className="text-center">
           <h3 className="text-lg font-bold text-textcolor-300 mb-2">Phone</h3>
