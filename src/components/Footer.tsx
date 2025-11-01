@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-textcolor-100 font-medium">Phone</p>
-              <p className="text-textcolor-200">+1 (555) 123-4567</p>
+              <p className="text-textcolor-200">(+250) 79-120-1462</p>
             </div>
             <div>
               <p className="text-textcolor-100 font-medium">Address</p>
