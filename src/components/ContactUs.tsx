@@ -109,7 +109,7 @@ const ContactUs: React.FC = () => {
         </div>
         <div className="text-center">
           <h3 className="text-lg font-bold text-textcolor-300 mb-2">Phone</h3>
-          <p className="text-textcolor-300/80">+1 (555) 123-4567</p>
+          <p className="text-textcolor-300/80">(+250) 79-120-1462</p>
         </div>
         <div className="text-center">
           <h3 className="text-lg font-bold text-textcolor-300 mb-2">Response Time</h3>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -22,21 +23,21 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-textcolor-100 font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-3 text-sm">
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Home</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Services</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">About</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Portfolio</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Contact</a></li>
+            <li><Link to="/" className="text-textcolor-200 hover:text-primarycolor-100">Home</Link></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">Services</Link></li>
+            <li><Link to="/#about" className="text-textcolor-200 hover:text-primarycolor-100">About</Link></li>
+            <li><Link to="/#portfolio" className="text-textcolor-200 hover:text-primarycolor-100">Portfolio</Link></li>
+            <li><Link to="/#contact" className="text-textcolor-200 hover:text-primarycolor-100">Contact</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="text-textcolor-100 font-semibold mb-4">Services</h4>
           <ul className="space-y-3 text-sm">
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Web Development</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Web Design</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Mobile Apps</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">AI Solutions</a></li>
-            <li><a href="#" className="text-textcolor-200 hover:text-primarycolor-100">Consultation</a></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">Web Development</Link></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">Web Design</Link></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">Mobile Apps</Link></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">AI Solutions</Link></li>
+            <li><Link to="/#services" className="text-textcolor-200 hover:text-primarycolor-100">Consultation</Link></li>
           </ul>
         </div>
         <div>
@@ -60,8 +61,8 @@ const Footer: React.FC = () => {
       <div className="mt-12 pt-8 border-t border-bordercolor-100 max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-textcolor-200 text-sm">&copy; {currentYear} IremeOn. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className="text-textcolor-200 hover:text-primarycolor-100 text-sm">Privacy Policy</a>
-          <a href="#" className="text-textcolor-200 hover:text-primarycolor-100 text-sm">Terms of Service</a>
+          <Link to="/privacy" className="text-textcolor-200 hover:text-primarycolor-100 text-sm">Privacy Policy</Link>
+          <Link to="/terms" className="text-textcolor-200 hover:text-primarycolor-100 text-sm">Terms of Service</Link>
         </div>
       </div>
     </footer>
