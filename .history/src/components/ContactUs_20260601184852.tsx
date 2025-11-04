@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { ArrowRight, MessageCircle } from "lucide-react";
-import { Modal } from "antd";
-import Button from "./Button";
+import React, { useState } from 'react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
+import { Modal } from 'antd';
+import Button from './Button';
+
 
 const ContactUs: React.FC = () => {
-  const apiUrl = import.meta.env.VITE_API_URL;
-  const apiKey = import.meta.env.VITE_API_KEY;
-
   const [result, setResult] = useState("");
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
@@ -16,11 +14,11 @@ const ContactUs: React.FC = () => {
     setResult("Sending...");
     setConfirmLoading(true);
     const formData = new FormData(event.currentTarget);
-    formData.append("access_key", apiKey);
+    formData.append("access_key", );
 
-    const response = await fetch(`${apiUrl}/submit`, {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData,
+      body: formData
     });
 
     const data = await response.json();
@@ -36,31 +34,28 @@ const ContactUs: React.FC = () => {
 
   const ContactForm = () => (
     <form onSubmit={onSubmit} className="space-y-4">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Your Name" 
+        required 
         className="w-full px-4 py-3 rounded-xl bg-textcolor-300/10 border border-textcolor-300/20 text-textcolor-300 placeholder-textcolor-300/60 focus:outline-none focus:border-textcolor-300/40"
       />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your Email" 
+        required 
         className="w-full px-4 py-3 rounded-xl bg-textcolor-300/10 border border-textcolor-300/20 text-textcolor-300 placeholder-textcolor-300/60 focus:outline-none focus:border-textcolor-300/40"
       />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        required
+      <textarea 
+        name="message" 
+        placeholder="Your Message" 
+        required 
         rows={4}
         className="w-full px-4 py-3 rounded-xl bg-textcolor-300/10 border border-textcolor-300/20 text-textcolor-300 placeholder-textcolor-300/60 focus:outline-none focus:border-textcolor-300/40 resize-none"
       />
-      <button
-        type="submit"
-        className="w-full px-6 py-3 bg-textcolor-300 text-primarycolor-100 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-textcolor-300/90 transition-colors"
-      >
+      <button type="submit" className="w-full px-6 py-3 bg-textcolor-300 text-primarycolor-100 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-textcolor-300/90 transition-colors">
         <MessageCircle size={20} /> Send Message <ArrowRight size={20} />
       </button>
       {result && <p className="text-textcolor-300 text-sm">{result}</p>}
@@ -68,28 +63,30 @@ const ContactUs: React.FC = () => {
   );
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-r from-primarycolor-300 via-primarycolor-200 to-buttoncolor-200 text-center"
-    >
+    <section id="contact" className="py-20 bg-gradient-to-r from-primarycolor-300 via-primarycolor-200 to-buttoncolor-200 text-center">
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-textcolor-300 mb-6">
-        Let's Build the Future <br />
+        Let's Build the Future{' '}
+        <br />
         <span className="text-buttoncolor-200">Together</span>
       </h2>
-
+      
       <p className="text-lg sm:text-xl text-textcolor-300 mb-12 max-w-3xl mx-auto">
         Ready to innovate, scale, and grow? Partner with IremeOn today.
       </p>
 
+      
+
       {/* Desktop Modal Button */}
       <div className="hidden lg:flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-        <button
+        <button 
           onClick={() => setOpen(true)}
           className="px-6 py-3 bg-textcolor-300 text-primarycolor-100 rounded-xl font-semibold flex items-center gap-2 hover:bg-textcolor-300/90 transition-colors"
         >
           <MessageCircle size={20} /> Contact Us <ArrowRight size={20} />
         </button>
-        <Button variant="secondary">Schedule a Call</Button>
+        <Button variant="secondary">
+          Schedule a Call
+        </Button>
       </div>
 
       {/* Antd Modal for Desktop */}
@@ -116,9 +113,7 @@ const ContactUs: React.FC = () => {
           <p className="text-textcolor-300/80">(+250) 79-120-1462</p>
         </div>
         <div className="text-center">
-          <h3 className="text-lg font-bold text-textcolor-300 mb-2">
-            Response Time
-          </h3>
+          <h3 className="text-lg font-bold text-textcolor-300 mb-2">Response Time</h3>
           <p className="text-textcolor-300/80">Within 24 hours</p>
         </div>
       </div>

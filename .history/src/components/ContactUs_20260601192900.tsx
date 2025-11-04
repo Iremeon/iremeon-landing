@@ -18,7 +18,7 @@ const ContactUs: React.FC = () => {
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", apiKey);
 
-    const response = await fetch(`${apiUrl}/submit`, {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });

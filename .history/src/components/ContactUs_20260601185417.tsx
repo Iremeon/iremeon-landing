@@ -3,22 +3,22 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { Modal } from "antd";
 import Button from "./Button";
 
-const ContactUs: React.FC = () => {
-  const apiUrl = import.meta.env.VITE_API_URL;
-  const apiKey = import.meta.env.VITE_API_KEY;
 
+const ContactUs: React.FC = () => {
   const [result, setResult] = useState("");
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
+
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending...");
     setConfirmLoading(true);
     const formData = new FormData(event.currentTarget);
-    formData.append("access_key", apiKey);
+    formData.append("access_key", accessKey);
 
-    const response = await fetch(`${apiUrl}/submit`, {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
