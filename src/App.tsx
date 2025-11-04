@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import LandingPage from "./pages/LandingPage"
 import Privacy from "./components/Privacy"
 import Terms from "./components/Terms"
+import ScrollToTop from "./components/ScrollToTop"
 
 const App: React.FC = () =>  {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () =>  {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
+        <ScrollToTop />
       </div>
     </Router>
   )
